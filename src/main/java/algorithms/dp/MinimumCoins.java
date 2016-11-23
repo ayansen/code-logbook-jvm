@@ -4,9 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by aysen on 10/2/16.
- */
+
 public class MinimumCoins {
 
     private int findMinStepsRecursive(int sum, List<Integer> availableCoins, int iteration, Integer[] memo) {

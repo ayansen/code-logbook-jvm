@@ -2,9 +2,6 @@ package algorithms.dp;
 
 import java.util.Arrays;
 
-/**
- * Created by aysen on 10/3/16.
- */
 public class MaxSubMatrix {
 
     /**

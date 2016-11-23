@@ -1,8 +1,5 @@
 package algorithms.dp;
 
-/**
- * Created by aysen on 10/1/16.
- */
 public class LongestCommonSubsequence {
 
     // 0 | 0 | 0 | 0 |0 |0 | 0| 0

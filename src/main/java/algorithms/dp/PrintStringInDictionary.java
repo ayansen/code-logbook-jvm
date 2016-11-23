@@ -1,10 +1,5 @@
 package algorithms.dp;
 
-import java.util.List;
-
-/**
- * Created by aysen on 11/1/16.
- */
 public class PrintStringInDictionary {
 
 

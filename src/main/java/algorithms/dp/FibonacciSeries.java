@@ -1,12 +1,14 @@
 package algorithms.dp;
 
-/**
- * Created by aysen on 10/1/16.
- */
+
 public class FibonacciSeries {
 
     public int sumFibonacci(int n) {
         Integer[] memo = new Integer[n + 1];
+        return sumFibonacciRecursive(n, memo);
+    }
+
+    private int sumFibonacciRecursive(int n, Integer[] memo) {
         if (memo[n] != null) {
             return memo[n];
         }
@@ -15,7 +17,7 @@ public class FibonacciSeries {
         } else if (n == 1 || n == 2) {
             memo[n] = 1;
         } else {
-            memo[n] = sumFibonacci(n - 1) + sumFibonacci(n - 2);
+            memo[n] = sumFibonacciRecursive(n - 1, memo) + sumFibonacciRecursive(n - 2, memo);
         }
         return memo[n];
     }

@@ -4,9 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-/**
- * Created by aysen on 10/2/16.
- */
+
 public class LowestTravelCost {
 
     private int findLowestCostRecursive(int[] daysOfTravel, int currentValidity, int currentIndex, Map<Integer, Integer> costValidityMap, Map<Integer, Integer> memo) {
