@@ -89,7 +89,7 @@ public class TreeTest {
         root.getLeft().setLeft(createNode(25));
         root.getLeft().setRight(createNode(9));
 
-        Assert.assertEquals(4L, TreeProblems.findSizeOfBinaryTree(root));
+        Assert.assertEquals(5L, TreeProblems.findSizeOfBinaryTree(root));
 
     }
 

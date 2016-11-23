@@ -1,4 +1,4 @@
-package dp;
+package algorithms.dp;
 
 import java.util.Collections;
 import java.util.List;

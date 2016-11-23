@@ -1,6 +1,6 @@
 package datastructure;
 
-import com.sun.tools.javac.util.Pair;
+import javafx.util.Pair;
 import datastructure.hashing.problems.HashProblems;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,6 +12,6 @@ public class HashingTest {
     @Test
     public void testFindPairForSum() {
         int[] arr = {10, 15, 24, 45, 33, 0};
-        Assert.assertEquals(HashProblems.findPairForSum(arr, 60).get(), Pair.of(45, 15));
+        Assert.assertEquals(HashProblems.findPairForSum(arr, 60).get(), new Pair<>(45, 15));
     }
 }

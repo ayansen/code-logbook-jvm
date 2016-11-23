@@ -1,4 +1,4 @@
-package datastructure.graphs.problems;
+package algorithms.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;

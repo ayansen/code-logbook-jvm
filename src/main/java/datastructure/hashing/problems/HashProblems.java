@@ -1,7 +1,7 @@
 package datastructure.hashing.problems;
 
-import com.sun.tools.javac.util.Pair;
 import datastructure.trees.BinaryTreeNode;
+import javafx.util.Pair;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ public class HashProblems {
         for (int number : numbers) {
             if (number < sum) {
                 if (map.containsKey(number)) {
-                    return Optional.of(Pair.of(number, sum - number));
+                    return Optional.of(new Pair<>(number, sum - number));
                 } else {
                     map.put(sum - number, true);
                 }

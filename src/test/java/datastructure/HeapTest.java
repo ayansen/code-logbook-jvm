@@ -1,9 +1,6 @@
 package datastructure;
 
-import com.sun.tools.javac.util.Pair;
 import datastructure.heap.problems.HeapProblems;
-import datastructure.lists.problems.LargestAndSmallestNumber;
-import datastructure.lists.problems.ListProblems;
 import org.junit.Assert;
 import org.junit.Test;
 

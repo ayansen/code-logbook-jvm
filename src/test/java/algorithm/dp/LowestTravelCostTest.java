@@ -1,5 +1,6 @@
-package dp;
+package algorithm.dp;
 
+import algorithms.dp.LowestTravelCost;
 import org.junit.Test;
 
 import java.util.ArrayList;

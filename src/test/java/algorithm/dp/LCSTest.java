@@ -1,5 +1,6 @@
-package dp;
+package algorithm.dp;
 
+import algorithms.dp.LongestCommonSubsequence;
 import org.junit.Test;
 
 /**

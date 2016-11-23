@@ -4,7 +4,8 @@ package datastructure.lists.problems;
  * Created by aysen on 10/16/16.
  */
 
-import com.sun.tools.javac.util.Pair;
+
+import javafx.util.Pair;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class LargestAndSmallestNumber {
     public static Pair<Integer, Integer> findLargestAndSmallestNumberInList(List<Integer> list) {
         int smallest = list.get(0) < list.get(list.size() - 1) ? list.get(0) : list.get(list.size() - 1);
         int largest = getMax(list, 0, list.size());
-        return Pair.of(smallest, largest);
+        return new Pair<>(smallest, largest);
 
     }
 

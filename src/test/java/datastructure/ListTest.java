@@ -1,9 +1,9 @@
 package datastructure;
 
-import com.sun.tools.javac.util.Pair;
 import datastructure.lists.problems.LargestAndSmallestNumber;
 import datastructure.lists.problems.ListProblems;
 import datastructure.lists.problems.MergeSortedLinkedLists;
+import javafx.util.Pair;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -48,8 +48,8 @@ public class ListTest {
 
 
         Pair<Integer, Integer> pair = LargestAndSmallestNumber.findLargestAndSmallestNumberInList(firstList);
-        Assert.assertEquals(pair.fst.longValue(), 1L);
-        Assert.assertEquals(pair.snd.longValue(), 123L);
+        Assert.assertEquals(pair.getKey().longValue(), 1L);
+        Assert.assertEquals(pair.getValue().longValue(), 123L);
 
     }
 
