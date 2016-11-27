@@ -1,5 +1,6 @@
 package datastructure.graphs;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -40,54 +41,5 @@ public class EdgeWeightedGraph<T> {
 
     public void addEdge(int id, Edge<T> edge) {
         vertices.get(id).addEdge(edge);
-    }
-
-    public List<T> depthFirstTraversal(int vertexId) {
-        Set<Edge<T>> traversedEdges = new HashSet<>();
-        Set<Integer> traversedVertices = new HashSet<>();
-        traversedVertices.add(vertexId);
-        depthFirstTraversalRecursive(vertexId, traversedEdges, traversedVertices);
-        return traversedEdges.stream().map(Edge::getWeight).collect(Collectors.toList());
-    }
-
-    public List<T> breadthFirstTraversal(int vertexId) {
-        Queue<Edge<T>> traversedEdges = new ArrayDeque<>();
-        Set<Integer> traversedVertices = new HashSet<>();
-        Queue<Integer> verticesAtSameLevel = new ArrayDeque<>();
-        verticesAtSameLevel.add(vertexId);
-        BreadthFirstTraversalRecursive(verticesAtSameLevel, traversedEdges, traversedVertices);
-        return traversedEdges.stream().map(Edge::getWeight).collect(Collectors.toList());
-    }
-
-    private void BreadthFirstTraversalRecursive(Queue<Integer> verticesAtSameLevel, Queue<Edge<T>> traversedEdges, Set<Integer> visitedVertices) {
-
-        if (!verticesAtSameLevel.isEmpty()) {
-            for (int i = 0; i < verticesAtSameLevel.size(); i++) {
-
-                Vertex<T> vertex = vertices.get(verticesAtSameLevel.poll());
-
-                if (!visitedVertices.contains(vertex.getId())) {
-                    visitedVertices.add(vertex.getId());
-                    vertex.getEdges().forEach(edge -> {
-                        traversedEdges.add(edge);
-                        verticesAtSameLevel.add(edge.getVertexId());
-
-                    });
-                }
-
-            }
-            BreadthFirstTraversalRecursive(verticesAtSameLevel, traversedEdges, visitedVertices);
-        }
-    }
-
-
-    private void depthFirstTraversalRecursive(int vertexId, Set<Edge<T>> traversedEdges, Set<Integer> visitedVertices) {
-        vertices.get(vertexId).getEdges().forEach(adjacentEdge -> {
-            if (!visitedVertices.contains(adjacentEdge.getVertexId())) {
-                traversedEdges.add(adjacentEdge);
-                visitedVertices.add(adjacentEdge.getVertexId());
-                depthFirstTraversalRecursive(adjacentEdge.getVertexId(), traversedEdges, visitedVertices);
-            }
-        });
     }
 }

@@ -1,8 +1,10 @@
 package datastructure;
 
 import datastructure.graphs.EdgeWeightedGraph;
-import datastructure.graphs.GraphTraversals;
-import datastructure.graphs.problems.GraphProblems;
+import datastructure.graphs.problems.DetectCylesInAGraph;
+import datastructure.graphs.traversals.BreadthFirstTraversal;
+import datastructure.graphs.traversals.DepthFirstTraversal;
+import datastructure.graphs.traversals.TopologicalSort;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,10 +23,9 @@ public class GraphTest {
         };
 
         EdgeWeightedGraph<Integer> graph = new EdgeWeightedGraph<>(matrix);
-        graph.depthFirstTraversal(0).stream().forEach(System.out::println);
-        graph.breadthFirstTraversal(0).stream().forEach(System.out::println);
+        DepthFirstTraversal.depthFirstTraversal(graph, 0).stream().forEach(System.out::println);
+        BreadthFirstTraversal.breadthFirstTraversal(graph, 0).stream().forEach(System.out::println);
     }
-
 
 
     @Test
@@ -35,7 +36,7 @@ public class GraphTest {
                 {null, null, null}
         };
 
-        Assert.assertTrue(GraphProblems.detectCycleInGraph(matrix));
+        Assert.assertTrue(DetectCylesInAGraph.detectCycleInGraph(matrix));
     }
 
     @Test
@@ -47,7 +48,7 @@ public class GraphTest {
                 {null, null, null, null, 45},
                 {null, null, null, null, null}
         };
-        GraphTraversals.topologicalSort(new EdgeWeightedGraph<>(matrix), 0).stream().forEach(System.out::println);
+        TopologicalSort.topologicalSort(new EdgeWeightedGraph<>(matrix), 0).stream().forEach(System.out::println);
 
     }
 

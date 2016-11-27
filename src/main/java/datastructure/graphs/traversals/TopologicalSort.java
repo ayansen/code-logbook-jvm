@@ -1,14 +1,16 @@
-package datastructure.graphs;
+package datastructure.graphs.traversals;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import datastructure.graphs.Edge;
+import datastructure.graphs.EdgeWeightedGraph;
+import datastructure.graphs.Vertex;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * Created by aysen on 10/28/16.
  */
-public class GraphTraversals {
+public class TopologicalSort {
 
     public static <T> List<T> topologicalSort(EdgeWeightedGraph<T> graph, int vertexId) {
         List<Integer> visitedVertices = new ArrayList<>();
