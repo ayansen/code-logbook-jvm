@@ -1,4 +1,4 @@
-package datastructure.graphs.traversals;
+package datastructure.graphs.problems;
 
 import datastructure.graphs.Edge;
 import datastructure.graphs.EdgeWeightedGraph;

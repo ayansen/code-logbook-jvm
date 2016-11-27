@@ -1,15 +1,13 @@
 package datastructure.graphs.problems;
 
-import datastructure.graphs.Edge;
 import datastructure.graphs.EdgeWeightedGraph;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by aysen on 10/18/16.
+ * Created by aysen on 11/27/16.
  */
-public class GraphProblems {
+public class MaximumLengthBetweenCities {
 
     public static List<Integer> FindMaximumLengthBetweenCities(Integer[][] costMap, int numberOfCities) {
 
@@ -18,7 +16,5 @@ public class GraphProblems {
 
         return null;
     }
-
-
 
 }

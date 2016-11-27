@@ -4,7 +4,7 @@ import datastructure.graphs.EdgeWeightedGraph;
 import datastructure.graphs.problems.DetectCylesInAGraph;
 import datastructure.graphs.traversals.BreadthFirstTraversal;
 import datastructure.graphs.traversals.DepthFirstTraversal;
-import datastructure.graphs.traversals.TopologicalSort;
+import datastructure.graphs.problems.TopologicalSort;
 import org.junit.Assert;
 import org.junit.Test;
 
