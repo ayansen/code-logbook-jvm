@@ -3,9 +3,6 @@ package algorithms.backtracking;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by aysen on 11/3/16.
- */
 public class ResolveWildcardCharacter {
 
 

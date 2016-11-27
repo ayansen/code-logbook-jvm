@@ -1,8 +1,5 @@
 package algorithms.dp;
 
-/**
- * Created by aysen on 11/3/16.
- */
 public class StockPriceProblem {
 
     /**

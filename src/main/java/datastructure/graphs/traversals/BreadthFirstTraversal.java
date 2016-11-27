@@ -7,9 +7,6 @@ import datastructure.graphs.Vertex;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by aysen on 11/27/16.
- */
 public class BreadthFirstTraversal {
 
     public static <T> List<T> breadthFirstTraversal(EdgeWeightedGraph<T> graph, int vertexId) {
@@ -36,10 +33,8 @@ public class BreadthFirstTraversal {
 
                     });
                 }
-
             }
             BreadthFirstTraversalRecursive(graph, verticesAtSameLevel, traversedEdges, visitedVertices);
         }
     }
-
 }

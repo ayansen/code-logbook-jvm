@@ -6,9 +6,6 @@ import datastructure.graphs.EdgeWeightedGraph;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by aysen on 11/27/16.
- */
 public class DetectCylesInAGraph {
     /**
      * Detecting cycle in a graph

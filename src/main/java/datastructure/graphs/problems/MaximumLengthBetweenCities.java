@@ -4,9 +4,6 @@ import datastructure.graphs.EdgeWeightedGraph;
 
 import java.util.List;
 
-/**
- * Created by aysen on 11/27/16.
- */
 public class MaximumLengthBetweenCities {
 
     public static List<Integer> FindMaximumLengthBetweenCities(Integer[][] costMap, int numberOfCities) {

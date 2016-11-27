@@ -3,9 +3,6 @@ package algorithms.greedy;
 import datastructure.graphs.Edge;
 import datastructure.graphs.EdgeWeightedGraph;
 
-/**
- * Created by aysen on 11/23/16.
- */
 public class MinimumSpanningTree {
 
     /**

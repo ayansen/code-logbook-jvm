@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-/**
- * Created by aysen on 11/1/16.
- */
 public class FindLongestPathInMatrix {
 
     public static List<Integer> longestPathIncreasingInMatrix(final Integer[][] matrix) {

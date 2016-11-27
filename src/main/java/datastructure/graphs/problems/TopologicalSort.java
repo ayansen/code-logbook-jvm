@@ -7,9 +7,6 @@ import datastructure.graphs.Vertex;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by aysen on 10/28/16.
- */
 public class TopologicalSort {
 
     public static <T> List<T> topologicalSort(EdgeWeightedGraph<T> graph, int vertexId) {
