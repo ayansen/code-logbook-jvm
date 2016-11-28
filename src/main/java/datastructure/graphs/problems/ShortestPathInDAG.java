@@ -10,9 +10,8 @@ import java.util.Stack;
 //Given a Weighted Directed Acyclic Graph and a source vertex in the graph, find the shortest paths from given source to all other vertices.
 public class ShortestPathInDAG {
 
-
     /**
-     * Find shortest path from given vertex to all other vertices using dynamic programming
+     * Find shortest path from given vertex to all other vertices in a directed acyclic graph  using dynamic programming
      *
      * @param graph          - given edgeweighted graph
      * @param sourceVertexId - source vertex
