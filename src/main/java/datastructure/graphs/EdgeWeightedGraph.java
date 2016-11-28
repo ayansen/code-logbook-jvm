@@ -1,12 +1,8 @@
 package datastructure.graphs;
 
-import java.lang.reflect.Array;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.Map;
 
-/**
- * Created by aysen on 10/18/16.
- */
 public class EdgeWeightedGraph<T> {
 
     private final Map<Integer, Vertex<T>> vertices;
@@ -36,6 +32,10 @@ public class EdgeWeightedGraph<T> {
 
     public Vertex<T> getVertex(int id) {
         return vertices.get(id);
+    }
+
+    public int getVertexCount(){
+       return vertices.size();
     }
 
 
