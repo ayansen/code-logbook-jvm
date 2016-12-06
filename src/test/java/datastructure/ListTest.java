@@ -1,6 +1,6 @@
 package datastructure;
 
-import datastructure.lists.problems.LargestAndSmallestNumber;
+import algorithms.divideandconquer.LargestAndSmallestNumber;
 import datastructure.lists.problems.ListProblems;
 import datastructure.lists.problems.MergeSortedLinkedLists;
 import javafx.util.Pair;
@@ -55,9 +55,19 @@ public class ListTest {
 
     @Test
     public void FindMaxProductInAnArrayTest() {
+        Integer[] array = {2, 4, 5, -5, 7, 2, -1, -6, 2, 5};
+
+        Assert.assertEquals(ListProblems.findMaxSumOfSubArray(array).longValue(), 15);
+
+
+    }
+
+
+    @Test
+    public void FindMaxSumInSubArrayTest() {
         Integer[] array = {2, 4, 5, -10, 7, 2, -1, -6, 2, 5};
 
-        Assert.assertEquals(ListProblems.maximumProductOfSubarray(array).longValue(), 5600);
+        Assert.assertEquals(ListProblems.maximumProductOfSubarray(array).longValue(), 11);
 
 
     }

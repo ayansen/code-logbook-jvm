@@ -2,12 +2,11 @@ package algorithms.dp;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 
 public class LowestTravelCost {
 
-    private int findLowestCostRecursive(int[] daysOfTravel, int currentValidity, int currentIndex, Map<Integer, Integer> costValidityMap, Map<Integer, Integer> memo) {
+    private int findLowestCostRecursive(int[] daysOfTravel, int currentValidity, int currentIndex, Map<Integer, Integer> costValidityMap, Integer[] memo) {
 
         if (currentValidity >= 30 || currentIndex == daysOfTravel.length) {
             return 0;
@@ -20,8 +19,8 @@ public class LowestTravelCost {
             minimumCost = Collections.min(costValidityMap.entrySet().stream().map(tuple -> findLowestCostRecursive(daysOfTravel, currentValidity, currentIndex + 1, costValidityMap, memo)).collect(Collectors.toList()));
 
         } else {
-            if (memo.containsKey(dayOfMonth)) {
-                return memo.get(dayOfMonth);
+            if (memo[dayOfMonth] != null) {
+                return memo[dayOfMonth];
             }
             List<Integer> minimumCosts = new ArrayList<>();
             costValidityMap.entrySet().forEach(tuple -> {
@@ -30,7 +29,7 @@ public class LowestTravelCost {
             minimumCost = Collections.min(minimumCosts);
         }
 
-        memo.put(dayOfMonth, minimumCost);
+        memo[dayOfMonth] = minimumCost;
         return minimumCost;
     }
 
@@ -38,7 +37,7 @@ public class LowestTravelCost {
     public int findLowestTravelCost(int[] daysOfTravel) {
         Map<Integer, Integer> costValidityMap = new HashMap<>();
         costValidityMap.entrySet();
-        Map<Integer, Integer> memo = new HashMap<>();
+        Integer[] memo = new Integer[31];
         costValidityMap.put(2, 1);
         costValidityMap.put(7, 7);
         costValidityMap.put(25, 30);

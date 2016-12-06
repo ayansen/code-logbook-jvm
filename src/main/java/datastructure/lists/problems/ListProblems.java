@@ -57,5 +57,30 @@ public class ListProblems {
         }
     }
 
+    /**
+     * Given an array of positive and negative numbers find the maximum sum of sub array
+     *
+     * @param array input array
+     * @return maximum sum
+     */
+    public static Integer findMaxSumOfSubArray(Integer[] array) {
+        {
+            int maxSum = 0;
+            int runningMax = 0;
+            for (int i = 0; i < array.length; i++) {
+                Integer currentNumber = array[i];
+                if (currentNumber > 0) {
+                    runningMax = runningMax + currentNumber;
+                    maxSum = Math.max(runningMax, maxSum);
+                }
+                if (currentNumber < 0) {
+                    runningMax = Math.max(0, runningMax + currentNumber);
+
+                }
+            }
+            return maxSum;
+        }
+    }
+
 
 }

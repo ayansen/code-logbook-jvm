@@ -23,10 +23,11 @@ public class LongestCommonSubsequence {
             return 0;
         }
         if (firstString[positionOfFirstString] == secondString[positionOfSecondString]) {
-            return recursiveLCS(firstString, secondString, positionOfFirstString - 1, positionOfSecondString - 1, memo) + 1;
+            memo[positionOfFirstString][positionOfSecondString] = recursiveLCS(firstString, secondString, positionOfFirstString - 1, positionOfSecondString - 1, memo) + 1;
         } else {
-            return Math.max(recursiveLCS(firstString, secondString, positionOfFirstString, positionOfSecondString - 1, memo), recursiveLCS(firstString, secondString, positionOfFirstString - 1, positionOfSecondString, memo));
+            memo[positionOfFirstString][positionOfSecondString] = Math.max(recursiveLCS(firstString, secondString, positionOfFirstString, positionOfSecondString - 1, memo), recursiveLCS(firstString, secondString, positionOfFirstString - 1, positionOfSecondString, memo));
         }
+        return memo[positionOfFirstString][positionOfSecondString];
 
     }
 
@@ -35,30 +36,9 @@ public class LongestCommonSubsequence {
 
         Integer[][] memo = new Integer[firstString.length()][secondString.length()];
 
-        return recursiveLCS(firstString.toCharArray(), secondString.toCharArray(), firstString.length() - 1, secondString.length() - 1,memo);
+        return recursiveLCS(firstString.toCharArray(), secondString.toCharArray(), firstString.length() - 1, secondString.length() - 1, memo);
        /*
         */
-    }
-
-    private int lcsIterative(char[] firstString, char[] secondString) {
-
-        //min(f(x-1,y),f(x,y-1)) + 1 if(firstString[i] == secondString[j])
-
-        Integer[][] memo = new Integer[firstString.length][secondString.length];
-        for (int i = 0; i < firstString.length; i++) {
-
-            for (int j = 0; j < secondString.length; j++) {
-                if (i == 0 || j == 0) {
-                    memo[i][j] = 0;
-                } else if (firstString[i] == secondString[j]) {
-                    memo[i][j] = memo[i - 1][j - 1] + 1;
-                } else {
-                    memo[i][j] = Math.max(memo[i][j - 1], memo[i - 1][j]);
-                }
-            }
-        }
-        return memo[firstString.length - 1][secondString.length - 1];
-
     }
 
 

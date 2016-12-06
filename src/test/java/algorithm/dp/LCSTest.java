@@ -1,6 +1,7 @@
 package algorithm.dp;
 
 import algorithms.dp.LongestCommonSubsequence;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -11,6 +12,6 @@ public class LCSTest {
     @Test
     public void testLcs() {
         LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-        System.out.println(lcs.longestCommonSubsequence("thanksa", "halkoa"));
+        Assert.assertEquals(lcs.longestCommonSubsequence("thanksa", "halkoa"), 3);
     }
 }

@@ -1,4 +1,4 @@
-package datastructure.lists.problems;
+package algorithms.divideandconquer;
 
 /**
  * Created by aysen on 10/16/16.

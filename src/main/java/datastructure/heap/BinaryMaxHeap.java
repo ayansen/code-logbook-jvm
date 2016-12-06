@@ -3,9 +3,6 @@ package datastructure.heap;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by aysen on 10/25/16.
- */
 public class BinaryMaxHeap<T extends Comparable> implements Heap<T> {
 
     List<T> heap;

@@ -7,9 +7,6 @@ import datastructure.heap.Heap;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by aysen on 10/26/16.
- */
 public class HeapProblems {
 
     public static List<Integer> sortListUsingHeap(List<Integer> numbers) {
