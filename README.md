@@ -33,17 +33,4 @@ Graph traversal is a technique for finding solutions to problems that can be rep
 This approach is broad, and includes depth-first search, breadth-first search, tree traversal, and many specific variations that may include local optimizations and excluding search spaces that can be determined to be non-optimum or not possible. 
 These techniques may be used to solve a variety of problems including shortest path and constraint satisfaction problems.
 
-## Datastructures
-
-
-### HashMaps
-
-### Heap
-
-### List
-
-### Stack
-
-### Tree
-
 
