@@ -1,10 +1,6 @@
 package algorithm.dp;
 
-import algorithms.dp.LowestTravelCost;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by aysen on 11/1/16.

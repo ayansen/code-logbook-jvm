@@ -1,6 +1,5 @@
 package algorithm.greedy;
 
-import algorithms.greedy.MinimumSpanningTree;
 import org.junit.Test;
 
 /**

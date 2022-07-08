@@ -1,6 +1,5 @@
 package algorithm.dp;
 
-import algorithms.dp.MinimumPerfectSquares;
 import org.junit.Assert;
 import org.junit.Test;
 
